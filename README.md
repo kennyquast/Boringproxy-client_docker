@@ -7,7 +7,7 @@ _Boring Proxy Client as a docker (Eventually to be fully implemented in Unraid)_
 
 -----------------------------
 
-The Dockerfile will crate a docker for you. It however requires you to have the latest version of Boringproxy in the same folder
+The Dockerfile will create a docker for you. It however requires you to have the latest version of Boringproxy in the same folder
 you can get boringproxy from the official repository (https://github.com/boringproxy/boringproxy/releases)
 
 Once you have these files in the same folder you can build and run the docker
