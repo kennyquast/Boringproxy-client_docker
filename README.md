@@ -14,8 +14,9 @@ Once you have these files in the same folder you can build and run the docker
 
 run the following to get up and running
 
-docker build -t boring_proxy_docker .
-docker run --name BoringProxy-Client boring_proxy_docker
+```docker build -t boring_proxy_docker .```
+
+```docker run --name BoringProxy-Client boring_proxy_docker```
 
 this will now be running on your client side
 however you will be stuck with it running in your terminal. 
