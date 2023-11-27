@@ -2,6 +2,7 @@
 Boring Proxy Client as a docker (Eventually to be fully implemented in Unraid)
 
 prerequisite: You need the BoringProxy serverside already setup somewhere (usually on a public IP facing VPS somewhere)
+
 prerequisite: You Need the current version of BoringProxy (https://github.com/boringproxy/boringproxy/releases) in the same folder as the Dockerfile
 -----------------------------
 
