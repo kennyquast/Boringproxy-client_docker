@@ -8,8 +8,6 @@ _Boring Proxy Client as a docker (Eventually to be fully implemented in Unraid)_
 The Dockerfile will create a docker for you.
 You can get boringproxy from the official repository (https://github.com/boringproxy/boringproxy/releases)
 
-Once you have these files in the same folder you can build and run the docker
-
 run the following to get up and running (replacing <VARIABLE> with the correct info for your server)
 
 # Building the Docker
