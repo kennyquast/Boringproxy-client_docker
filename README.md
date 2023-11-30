@@ -48,4 +48,21 @@ Future:
 I'll work on cleaning this up to utilize Unraids templating system, and get it added to the Community Apps
 
 
-Add : Docker.com repo ninstructions
+# Building the Docker feom Dockerhub
+
+```docker pull slayer1011/boringproxy_client:latest```
+
+
+# Running the Docker
+_note: you get all this information from your server side admin panel_
+
+```docker run -d \
+--name boringproxy-client \
+--mount type=bind,source=<PATH TO LOCAL FOLDER>,target=/boringproxy/certs \
+-e serverurl=<SERVER URL> \
+-e token=<TOKEN> \
+-e client=<CLIENT NAME> \
+-e username=<USERNAME> \
+-e acmeemail=<EMAIL> \
+slayer1011/boringproxy-client:latest
+```
