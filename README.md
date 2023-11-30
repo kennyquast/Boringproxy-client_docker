@@ -48,9 +48,9 @@ Future:
 I'll work on cleaning this up to utilize Unraids templating system, and get it added to the Community Apps
 
 
-# Building the Docker feom Dockerhub
+# Building the Docker from Dockerhub
 
-```docker pull slayer1011/boringproxy_client:latest```
+```docker pull slayer1011/boringproxy-client:latest```
 
 
 # Running the Docker
