@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Boringproxy-client</Name>
+  <Repository>slayer1011/boringproxy-client</Repository>
+  <Registry>https://github.com/kennyquast/Boringproxy-client_docker</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Unoffical Boringproxy Docker&#xD;
+Boringproxy is a combination of a reverse proxy and a tunnel manager.&#xD;
+&#xD;
+What that means is if you have a self-hosted web service (Nextcloud, Emby, Jellyfin, etherpad, personal website, etc.) running on a private network (such as behind a NAT at home), boringproxy aims to provide the easiest way to securely (i.e. HTTPS and optional password-protection) expose that server to the internet, so you can access it from anywhere.&#xD;
+&#xD;
+Project Homepage : https://boringproxy.io/&#xD;
+</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/boringproxy/boringproxy/master/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1701390280</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>You must already have the Boringproxy sever running on a public facing IP &amp;amp; Domain</Requires>
+  <Config Name="Certs" Target="/boringproxy/certs" Default="/mnt/user/appdata/boringproxy/certs" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/boringproxy/certs</Config>
+  <Config Name="Server URL" Target="serverurl" Default="boringproxy.example.com" Mode="" Description="Path to your Boringproxy server admin panel" Type="Variable" Display="always" Required="true" Mask="false">boringproxy.example.com</Config>
+  <Config Name="Token" Target="token" Default="Your Login Token from Boringproxy server" Mode="" Description="Your Login Token from Boringproxy server" Type="Variable" Display="always" Required="true" Mask="false">Your Login Token from Boringproxy server</Config>
+  <Config Name="Username" Target="username" Default="Username" Mode="" Description="The username from your Boringproxy server" Type="Variable" Display="always" Required="true" Mask="false">Username</Config>
+  <Config Name="Acme Email" Target="acmeemail" Default="youremail@example.com" Mode="" Description="The email you want to use to register your SSL Certificate to. Used only if the SSL provider had issues" Type="Variable" Display="always" Required="true" Mask="false">youremail@example.com</Config>
+  <Config Name="Port" Target="8080" Default="8000" Mode="tcp" Description="Port used to pass through to container" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="Client" Target="client" Default="Unraid-docker" Mode="" Description="A unique name used to tunnel back here from the Boringproxy-server" Type="Variable" Display="always" Required="false" Mask="false">Unraid-docker</Config>
+</Container>
