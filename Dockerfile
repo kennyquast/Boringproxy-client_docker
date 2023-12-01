@@ -14,6 +14,7 @@ ENV acmeemail=acmeemail
 RUN mkdir /boringproxy
 #make the certs folder
 RUN mkdir /boringproxy/certs
+#Download Latest Version
 RUN wget https://github.com/boringproxy/boringproxy/releases/latest/download/boringproxy-linux-x86_64
 
 # Make executable
