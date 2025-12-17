@@ -1,6 +1,7 @@
-# A dockerfile must always start by importing the base image.
-# We use the keyword 'FROM' to do that.
-FROM golang:1.19-alpine
+FROM alpine:latest
+LABEL boringproxy.version="0.10.0"
+LABEL maintainer="slayer1011"
+
 #Setup the Enviornment variables 
 #pass these with the -e command when running the Docker
 
@@ -10,18 +11,19 @@ ENV client=client
 ENV username=username
 ENV acmeemail=acmeemail
 
-#make the boringproxy working folder
-RUN mkdir /boringproxy
-#make the certs folder
-RUN mkdir /boringproxy/certs
-#Download Latest Version
-RUN wget https://github.com/boringproxy/boringproxy/releases/latest/download/boringproxy-linux-x86_64
+#make the boringproxy working folders
+RUN mkdir -p /boringproxy/certs
 
-# Make executable
-RUN chmod +x boringproxy-linux-x86_64
-#Move it to the boringproxy workign folder
-RUN mv boringproxy-linux-x86_64 /boringproxy
+# Download latest version
+RUN wget -q https://github.com/boringproxy/boringproxy/releases/latest/download/boringproxy-linux-x86_64 \
+ && chmod +x boringproxy-linux-x86_64 \
+ && mv boringproxy-linux-x86_64 /boringproxy/
 
-
-
-ENTRYPOINT /boringproxy/boringproxy-linux-x86_64 client -server ${serverurl} -token ${token} -client-name ${client} -user ${username} -acme-email ${acmeemail} -cert-dir /boringproxy/certs
+# Run boringproxy client with the environment variables
+ENTRYPOINT /boringproxy/boringproxy-linux-x86_64 client \
+  -server ${serverurl} \
+  -token ${token} \
+  -client-name ${client} \
+  -user ${username} \
+  -acme-email ${acmeemail} \
+  -cert-dir /boringproxy/certs
