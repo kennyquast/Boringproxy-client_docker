@@ -33,5 +33,5 @@ Project Homepage : https://boringproxy.io/&#xD;
   <Config Name="Username" Target="username" Default="Username" Mode="" Description="The username from your Boringproxy server" Type="Variable" Display="always" Required="true" Mask="false">Username</Config>
   <Config Name="Acme Email" Target="acmeemail" Default="youremail@example.com" Mode="" Description="The email you want to use to register your SSL Certificate to. Used only if the SSL provider had issues" Type="Variable" Display="always" Required="true" Mask="false">youremail@example.com</Config>
   <Config Name="Port" Target="8080" Default="8000" Mode="tcp" Description="Port used to pass through to container" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
-  <Config Name="Client" Target="client" Default="Unraid-docker" Mode="" Description="A unique name used to tunnel back here from the Boringproxy-server" Type="Variable" Display="always" Required="false" Mask="false">Unraid-docker</Config>
+  <Config Name="Client" Target="client" Default="Unraid-docker" Mode="" Description="A unique name used to tunnel back here from the Boringproxy-server" Type="Variable" Display="always" Required="true" Mask="false">Unraid-docker</Config>
 </Container>
