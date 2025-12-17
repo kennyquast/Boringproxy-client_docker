@@ -39,7 +39,7 @@ docker run -d \
 -e token=90sdfUIH9kj098GJG67ghjGKlk \
 -e client=Boring_Docker \
 -e username=admin \
--e acmeemail=email@example.com> \
+-e acmeemail=email@example.com \
 boringproxy-client
 ```
 
